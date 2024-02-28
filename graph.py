@@ -112,7 +112,7 @@ def get_end_date():
 
 #imports data set and extracts data and returns data for a specific menu item within a user defined range
 def get_selected_item(item, startdate, enddate):#
-    df1 = pd.read_csv("Task4a_data.csv") 
+    df1 = pd.read_csv("data.csv") 
     df2 = df1.loc[df1['Menu Item'] == item]
     df3 = df2.loc[:,startdate:enddate]
     # Creating our graph in order to graphically show our data to our user
@@ -137,7 +137,7 @@ def show_all_data():
     startdate = "03/03/2023"
     enddate = "31/05/2023"
     item = "All Items"
-    df1 = pd.read_csv("Task4a_data.csv") 
+    df1 = pd.read_csv("data.csv") 
     df2 = df1.loc[:,startdate:enddate]
     df3 = df1.loc[df1['Menu Item'] == item]
     # Creating our graph in order to graphically show our data to our user
